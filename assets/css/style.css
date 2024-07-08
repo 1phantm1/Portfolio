@@ -13,7 +13,12 @@
     font-family: "Montserrat";
     src: url(../fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
+@font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto/Roboto-Black.ttf);
+}
 :root {
+    --color0: #ffffff;
     --color1: #0a3752;
     --color2: #04090D;
     --color3: #0F1D26;
@@ -26,12 +31,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "JetBrains Mono";
 }
 body{
+    width: 100%;
+    height: 100vh;
     background-color: var(--color2);
 }
 .overflow {
+    display: none;
     position: absolute;
     opacity: 0;
     transition: opacity 0.7s ease-in;
@@ -42,6 +49,8 @@ body{
 }
 
 header {
+    font-family: 'Montserrat';
+    color: var(--color0);
     z-index: 3;
     display: flex;
     flex-direction: row-reverse;
@@ -51,7 +60,6 @@ header {
 header div {
     padding: 10px 10px 10px 0;
     flex: auto;
-    color: white;
 }
 
 .logo {
@@ -68,7 +76,6 @@ header div {
 }
 
 .close {
-    color: white;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: 1.5px solid var(--color1);
@@ -76,6 +83,7 @@ header div {
 }
 
 .content {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     position: absolute;
     top: -100%;
     transition: top .5s ease-in-out;
@@ -91,23 +99,19 @@ header div {
 
 .content li{
     position: relative;
-    font-size: 19px;
+    font-size: 22px;
     padding: 15px;
-    color: white;
     text-align: center;
     overflow: hidden;
 }
 
 
 .content li a{
-    
-    color: white;
     transition: color 1s ease;
     text-decoration: none;
+    color: var(--color0);
 }
-.content li a:hover{
-    color: #177cd4;
-}
+.content li a:hover{color: #177cd4;}
 .content li::before {
     content: '';
     position: absolute;
@@ -119,9 +123,7 @@ header div {
     z-index: -1;
     transition: width 1s ease, left 0.5s ease;
 }
-.content li::after{
-    content: '';
-}
+.content li::after{content: '';}
 .content li:hover::before {
     width: 100%;
     left: 0;
@@ -131,20 +133,11 @@ header div {
     margin: 20px;
     color: white;
 }
-.hi{
-    font-size: 1.5rem;
-}
-.typeEffect{
-    font-size: 1rem;
-}
-.typed-cursor{
-    font-size: 1rem;
-}
-.typewriter{
-    font-weight: bold;
-}
+.hi{font-size: 1.5rem;}
+.typeEffect{font-size: 1rem;}
+.typed-cursor{font-size: 1rem;}
+.typewriter{font-weight: bold;}
 .cta-mail{
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -157,10 +150,61 @@ header div {
     height: 8vh;
     border: none;
     border-radius: 10px;
+    cursor: pointer;
+    transition: scale ease;
 }
-.social{
-    margin-top: 15px;
-}
-.social a img{
+.cta-button:hover{transform: scale(1.01);}
+.social{margin-top: 15px;}
+.social a{
     margin-right: 10px;
+    transition: scale 2s ease-in-out;
+}
+.social a img{transition: scale ease-in-out;}
+.social a img:hover{transform: scale(1.3);}
+
+.mail-form{
+    font-family: Arial;
+    width: 80%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+    padding: 10px;
+    margin-left: 25px;
+}
+.mail-form h2{
+    color: #cdcdcd;
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.mail-form form{
+    border-radius: 20px;
+    color: #cdcdcd;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.mail-form form span{
+    color: rgb(255, 67, 67);
+}
+.mail-form form input, .mail-form form textarea{
+    color: var(--color0);
+    margin: 5px 5px 5px 0;
+    background-color: #37393a;
+    border-radius: 7px;
+    border: none;
+    height: 25px;
+}
+.mail-form form input[type="submit"]{
+    background-color: #177cd4;
+    width: 75%;
+    text-align: center;
+    margin-left: 25px;
+    margin-top: 15px;
+    height: 40px;
 }

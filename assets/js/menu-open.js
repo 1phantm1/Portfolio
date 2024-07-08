@@ -23,9 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.style.display = "block";
             menu_list.style.top = "-100%";
             xmark.style.display = "none";
-            menu_overflow.style.opacity = "0";
+            menu_overflow.style.display = "none";
             setTimeout(() => {
-                menu_overflow.style.display = "none";
+                menu_overflow.style.opacity = "0";
             }, 300);
             openmenu = false;
         }

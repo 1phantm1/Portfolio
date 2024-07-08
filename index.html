@@ -10,6 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" integrity="sha384-NMn9+T8zIKnDUstqb5le7vdLNSyAgSU9DtEPT/b7ks9NJQpPk4Dc9b1tI8oyzimc" crossorigin="anonymous"></script>
     <script defer src="assets/js/type-effect.js"></script>
     <script defer src="assets/js/menu-open.js"></script> 
+    <script defer src="assets/js/mail-form.js"></script>
     <!--end js script import-->
 </head>
 <body>
@@ -37,11 +38,26 @@
         <div class="cta-mail">
             <button class="cta-button"><i class="fa-solid fa-envelope"></i> Entre em contato</button>
             <div class="social">
-                <a href="#"><img src="assets/img/svg/github.svg" width="20px" alt=""></a>
-                <a href="#"><img src="assets/img/svg/linkedin.svg" width="20px" alt=""></a>
+                <a href="https://github.com/1phantm1"><img src="assets/img/svg/github.svg" width="20px" alt=""></a>
+                <a href="https://www.linkedin.com/in/pietro-dsescudero-6702b7318/"><img src="assets/img/svg/linkedin.svg" width="20px" alt=""></a>
             </div>
         </div>
         
     </div>
+    
+    </div>
+    <div class="mail-form">
+        <h2>Nos envie um e-mail!</h2>
+        <form id="mailform" onsubmit="submitForm(event)" method="post">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name"><br>
+            <label for="mail">Email<span>*</span></label>
+            <input type="email" name="mail" id="mail" required><br>
+            <label for="subject">Assunto<span>*</span></label>
+            <input type="text" name="subject" id="subject" required maxlength="100"><br>
+            <label for="message">Mensagem<span>*</span></label>
+            <textarea name="message" id="message" style="height: 150px;"></textarea>
+            <input type="submit" value="Enviar E-mail" required>
+        </form>
 </body>
 </html>
