@@ -24,33 +24,36 @@
     <div id="collapsed" class="content">
         <div class="close"><i id="close-icon" class="fa-solid fa-xmark"></i></div>
         <ul>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Habilidades</a></li>
-            <li><a href="#">Projetos</a></li>
-            <li><a href="#">Contato</a></li>
+            <li><a href="#home">Início</a></li>
+            <li><a href="#about">Sobre</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
     </div>
     <!--end menu-->
     <!--start home-->
-    <div class="home">
+    <div id="home" class="home">
         <span class="hi"><p><span class="comment">/*</span><br> Olá, eu sou</p></span>
         <span><h2>Pietro D'Avila</h2></span>
         <span class="typeEffect"><h3>Sou um <span id="typewriter"></span></h3><span class="comment">*/</span></span>
-        <div class="cta-mail">
-            <button class="cta-button"><i class="fa-solid fa-envelope"></i><span>Entre em contato</span></button>
+        <div class="cta-mail">  
+            <button class="cta-button"><i class="fa-solid fa-envelope"></i><a href="">Entre em contato</a></button>
             <div class="social">
                 <a href="https://github.com/1phantm1"><img src="assets/img/svg/github.svg" width="20px" alt=""></a>
                 <a href="https://www.linkedin.com/in/pietro-dsescudero-6702b7318/"><img src="assets/img/svg/linkedin.svg" width="20px" alt=""></a>
             </div>
         </div>
         <!--end home-->
-        <div class="about">
-            <h2><span class="comment">//</span> Sobre mim</h2>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem quos cum magnam, facilis aut laudantium nesciunt laborum fuga, repellendus hic corrupti earum dolore asperiores repellat vel quis necessitatibus temporibus sunt?</p>
+        <div id="about" class="about">
+            <h2><span class="comment">//</span>Sobre mim</h2>
+            <p>Olá, meu nome é Pietro, sou um programador apaixonado por tecnologia e desenvolvimento. Embora eu ainda seja menor de idade e não tenha experiência profissional, busco sempre aprender e aprimorar minhas habilidades na área.</p><br>
+            <p>Estou sempre explorando linguagens e ferramentas, e tenho um forte interesse em desenvolvimento web, segurança cibernética e inteligência artificial. Acredito que a curiosidade e a dedicação são características essenciais para um bom programador, e estou empenhado em construir um futuro na área.</p><br> 
+            <p>Este portfólio é para demonstrar alguns dos meus projetos. Espero que goste do que vê e estou sempre aberto a feedbacks e oportunidades!</p>
+
         </div>
-        <div class="skills">
-            <h2><span class="comment">//</span> habilidades</h2>
+        <div id="skills" class="skills">
+            <h2><span class="comment">//</span>habilidades</h2>
             <p>Algumas das minhas habilidades são: </p>
             <div class="skill-div">
                 <h3 class="front"><span class="comment">#</span> Front-end</h3>
@@ -90,8 +93,8 @@
                 <p id="show-less" class="scale show-less"><span>Ver menos </span><i class="fa-solid fa-minus"></i></p>
             </div>
         </div>
-        <div class="projects">
-            <h2><span class="comment">//</span> Meus projetos</h2>
+        <div id="projects" class="projects">
+            <h2><span class="comment">//</span>Meus projetos</h2>
             <div class="project">
                 <h3>Projeto 1</h3>
                 <img src="assets/img/svg/under-construction.svg" alt="">
@@ -117,10 +120,15 @@
                 <img src="assets/img/svg/under-construction.svg" alt="">
             </div>
         </div>
-        <div class="contact">
+        <div id="contact" class="contact">
             <h2><span class="comment">//</span>Contato</h2>
-            <button id="copy_mail">dsescuderop@gmail.com</button>
+            <p class="button_cta">Para solicitar um trabalho personalizado ou esclarecer dúvidas, copie e cole o link no seu provedor de E-mail</p>
+            <button id="copy_mail">Copiar Email</button>
+            <p>Ou abra o link</p>
+            <a class="link_cta" href="mailto:dsescuderop@gmail.com" target="_blank">E nos mande um e-mail</a>
         </div>
-    
+    <footer>
+        <p>&copy; Pietro D'Avila, 2024</p>
+    </footer>
 </body>
 </html>
