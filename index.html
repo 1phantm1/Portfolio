@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-control" content="max-age=3600">
     <title>Portfólio</title>
+    <!--start css script import-->
+    <link rel="stylesheet" href="assets/css/media-query.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <!--end css script import-->
     <!--start js script import-->
-    <script src="https://kit.fontawesome.com/7351777d54.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12" integrity="sha384-NMn9+T8zIKnDUstqb5le7vdLNSyAgSU9DtEPT/b7ks9NJQpPk4Dc9b1tI8oyzimc" crossorigin="anonymous"></script>
+    <script rel="preconnect" src="https://kit.fontawesome.com/7351777d54.js" crossorigin="anonymous"></script>
+    <script rel="preconnect" src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"
+        integrity="sha384-NMn9+T8zIKnDUstqb5le7vdLNSyAgSU9DtEPT/b7ks9NJQpPk4Dc9b1tI8oyzimc"
+        crossorigin="anonymous"></script>
     <script defer src="assets/js/type-effect.js"></script>
-    <script defer src="assets/js/menu-open.js"></script> 
+    <script defer src="assets/js/menu-open.js"></script>
     <script defer src="assets/js/hide-div.js"></script>
     <script defer src="assets/js/copy.js"></script>
+    <script defer src="assets/js/scroll-reveal.js"></script>
+    <script src="https://unpkg.com/scrollreveal"
+        integrity="sha384-PdubLDIOlbUl+kBNCK0KdaW23JSjJx0gOYX/kcDfsGGrxnCHpYyX6JIWixXtwW1V"
+        crossorigin="anonymous"></script>
+
     <!--end js script import-->
 </head>
+
 <body>
+    <div id="alert" class="alert-div">
+        <div class="alert">
+            <div>
+                <img class="img" src="assets/img/svg/check.svg" width="35px" alt="">
+                <span class="text" id="alert-text"></span>
+            </div>
+        </div>
+    </div>
     <!--start menu-->
     <div class="overflow" id="overflow"></div>
     <header id="header">
-        <div class="logo"><h1>Pietro D'Avila</h1></div>
+
         <div class="menu"><i id="menu-icon" class="fa-solid fa-bars"></i></div>
-    </header>    
+    </header>
     <div id="collapsed" class="content">
         <div class="close"><i id="close-icon" class="fa-solid fa-xmark"></i></div>
         <ul>
@@ -32,103 +53,150 @@
         </ul>
     </div>
     <!--end menu-->
+    <!--start social-->
+    <div class="social-section">
+        <hr class="line">
+        <div class="social-big">
+            <a class="social-scale" href="https:/github.com/1phantm1"><img class="social-scale"
+                    src="assets/img/svg/github.svg" width="25px" alt=""></a><br>
+            <a href="https://www.linkedin.com/in/pietro-dsescudero-6702b7318/"><img class="social-scale"
+                    src="assets/img/svg/linkedin.svg" width="25px" alt=""></a>
+        </div>
+    </div>
+    <!--end social-->
     <!--start home-->
     <div id="home" class="home">
-        <span class="hi"><p><span class="comment">/*</span><br> Olá, eu sou</p></span>
-        <span><h2>Pietro D'Avila</h2></span>
-        <span class="typeEffect"><h3>Sou um <span id="typewriter"></span></h3><span class="comment">*/</span></span>
-        <div class="cta-mail">  
-            <button class="cta-button"><i class="fa-solid fa-envelope"></i><a href="">Entre em contato</a></button>
+        <span id="hi" class="hi">
+            <p><span class="comment">/*</span><br> Olá, eu sou</p>
+        </span>
+        <span>
+            <h2>Pietro D'Avila</h2>
+        </span>
+        <span class="typeEffect">
+            <h3>Sou um <span id="typewriter"></span></h3><span class="comment">*/</span>
+        </span>
+        <div class="cta-mail">
+            <button class="cta-button"><i class="fa-solid fa-envelope"></i><a href="#copy_mail">Entre em
+                    contato</a></button>
             <div class="social">
                 <a href="https://github.com/1phantm1"><img src="assets/img/svg/github.svg" width="20px" alt=""></a>
-                <a href="https://www.linkedin.com/in/pietro-dsescudero-6702b7318/"><img src="assets/img/svg/linkedin.svg" width="20px" alt=""></a>
+                <a href="https://www.linkedin.com/in/pietro-dsescudero-6702b7318/"><img
+                        src="assets/img/svg/linkedin.svg" width="20px" alt=""></a>
             </div>
         </div>
-        <!--end home-->
-        <div id="about" class="about">
-            <h2><span class="comment">//</span>Sobre mim</h2>
-            <p>Olá, meu nome é Pietro, sou um programador apaixonado por tecnologia e desenvolvimento. Embora eu ainda seja menor de idade e não tenha experiência profissional, busco sempre aprender e aprimorar minhas habilidades na área.</p><br>
-            <p>Estou sempre explorando linguagens e ferramentas, e tenho um forte interesse em desenvolvimento web, segurança cibernética e inteligência artificial. Acredito que a curiosidade e a dedicação são características essenciais para um bom programador, e estou empenhado em construir um futuro na área.</p><br> 
-            <p>Este portfólio é para demonstrar alguns dos meus projetos. Espero que goste do que vê e estou sempre aberto a feedbacks e oportunidades!</p>
-
-        </div>
-        <div id="skills" class="skills">
-            <h2><span class="comment">//</span>habilidades</h2>
-            <p>Algumas das minhas habilidades são: </p>
+    </div>
+    <!--end home-->
+    <!--start about-->
+    <div id="about" class="about">
+        <h2><span class="comment">//</span>Sobre mim</h2>
+        <p>Olá, meu nome é Pietro, sou um programador apaixonado por tecnologia e desenvolvimento. Embora eu ainda
+            seja menor de idade e não tenha experiência profissional, busco sempre aprender e aprimorar minhas
+            habilidades na área.</p><br>
+        <p>Estou sempre explorando linguagens e ferramentas, e tenho um forte interesse em desenvolvimento web,
+            segurança cibernética e inteligência artificial. Acredito que a curiosidade e a dedicação são
+            características essenciais para um bom programador, e estou empenhado em construir um futuro na área.
+        </p><br>
+        <p>Este portfólio é para demonstrar alguns dos meus projetos. Espero que goste do que vê e estou sempre
+            aberto a feedbacks e oportunidades!</p>
+    </div>
+    <!--end about-->
+    <!--start skills-->
+    <div id="skills" class="skills">
+        <h2><span class="comment">//</span>Habilidades</h2>
+        <p class="skill-p">Algumas das minhas habilidades são: </p>
+        <div class="skill-section">
             <div class="skill-div">
-                <h3 class="front"><span class="comment">#</span> Front-end</h3>
-                <div class="language"><img src="assets/img/svg/html5.svg" width="35px" alt=""><span>HTML</span></div>
-                <div class="language"><img  src="assets/img/svg/css3.svg" width="35px" alt=""><span>CSS</span></div>
-                <div class="language"><img src="assets/img/svg/javascript.svg" width="35px" alt=""><span>JavaScript</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/html5.svg" width="35px"
+                        alt=""><span>HTML</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/css3.svg" width="35px"
+                        alt=""><span>CSS</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/javascript.svg" width="35px"
+                        alt=""><span>JavaScript</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/tailwindCSS.svg" width="35px"
+                        alt=""><span>Tailwind CSS</span></div>
             </div>
             <div class="skill-div">
-                <h3 class="back"><span class="comment">#</span> Back-end</h3>
-                <div class="language"><img src="assets/img/svg/php.svg" width="35px" alt=""><span>PHP</span></div>
-                <div class="language"><img  src="assets/img/svg/django.svg" width="35px" alt=""><span>Django</span></div>
-                <div class="language"><img src="assets/img/svg/flask.svg" width="35px" alt=""><span>Flask</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/php.svg" width="35px"
+                        alt=""><span>PHP</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/django.svg" width="35px"
+                        alt=""><span>Django</span></div>
+                <div class="language"><img class="image" src="assets/img/svg/flask.svg" width="35px"
+                        alt=""><span>Flask</span></div>
             </div>
             <div id="hide-div" class="hidden-div">
                 <div class="skill-div">
-                    <h3 class="mobile"><span class="comment">#</span> Mobile</h3>
-                    <div class="language"><img src="assets/img/svg/kotlin.svg" width="35px" alt=""><span>Kotlin</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/kotlin.svg" width="35px"
+                            alt=""><span>Kotlin</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/cpp.svg" width="35px"
+                            alt=""><span>C++</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/python.svg" width="35px"
+                            alt=""><span>Python</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/bash.svg" width="35px"
+                            alt=""><span>Bash</span></div>
                 </div>
                 <div class="skill-div">
-                    <h3 class="software"><span class="comment">#</span> Software</h3>
-                    <div class="language"><img src="assets/img/svg/cpp.svg" width="35px" alt=""><span>C++</span></div> 
-                    <div class="language"><img src="assets/img/svg/python.svg" width="35px" alt=""><span>Python</span></div> 
-                    <div class="language"><img src="assets/img/svg/bash.svg" width="35px" alt=""><span>Bash</span></div> 
+                    <div class="language"><img class="image" src="assets/img/svg/sqlite.svg" width="35px"
+                            alt=""><span>SQLite</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/windows.svg" width="35px"
+                            alt=""><span>Windows</span></div>
+                    <div class="language"><img class="image" src="assets/img/svg/linux.svg" width="35px"
+                            alt=""><span>Linux</span></div>
                 </div>
-                <div class="skill-div">
-                    <h3 class="database"><span class="comment">#</span> DataBase</h3>
-                    <div class="language"><img src="assets/img/svg/sqlite.svg" width="35px" alt=""><span>SQLite</span></div> 
-                </div>
-                <div class="skill-div">
-                    <h3 class="sistemas"><span class="comment">#</span> Sistemas</h3>
-                    <div class="language"><img src="assets/img/svg/windows.svg" width="35px" alt=""><span>Windows</span></div> 
-                    <div class="language"><img src="assets/img/svg/linux.svg" width="35px" alt=""><span>Linux</span></div> 
-                </div>
-            </div>
-            <div class="show-more">
-                <p id="show-more" class="scale"><span>Ver mais </span><i class="fa-solid fa-plus"></i></p>
-                <p id="show-less" class="scale show-less"><span>Ver menos </span><i class="fa-solid fa-minus"></i></p>
             </div>
         </div>
-        <div id="projects" class="projects">
-            <h2><span class="comment">//</span>Meus projetos</h2>
+
+        <div class="show-more">
+            <p id="show-more" class="scale show-more"><span>Ver mais</span><i class="fa-solid fa-plus"></i></p>
+            <p id="show-less" class="scale show-less"><span>Ver menos</span><i class="fa-solid fa-minus"></i>
+            </p>
+        </div>
+    </div>
+    <!--end skills-->
+    <!--start projects-->
+    <div id="projects" class="projects">
+        <h2><span class="comment">//</span>Meus projetos</h2>
+        <div class="project-div">
             <div class="project">
                 <h3>Projeto 1</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
             <div class="project">
                 <h3>Projeto 2</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
             <div class="project">
                 <h3>Projeto 3</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
             <div class="project">
                 <h3>Projeto 4</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
             <div class="project">
                 <h3>Projeto 5</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
             <div class="project">
                 <h3>Projeto 6</h3>
-                <img src="assets/img/svg/under-construction.svg" alt="">
+                <img class="image" loading="lazy" src="assets/img/png/under-construction.png" alt="">
             </div>
         </div>
-        <div id="contact" class="contact">
-            <h2><span class="comment">//</span>Contato</h2>
-            <p class="button_cta">Para solicitar um trabalho personalizado ou esclarecer dúvidas, copie e cole o link no seu provedor de E-mail</p>
-            <button id="copy_mail">Copiar Email</button>
-            <p>Ou abra o link</p>
-            <a class="link_cta" href="mailto:dsescuderop@gmail.com" target="_blank">E nos mande um e-mail</a>
-        </div>
+    </div>
+    <!--end projects-->
+    <!--start contact-->
+    <div id="contact" class="contact">
+        <h2><span class="comment">//</span>Contato</h2>
+        <p class="button-cta">Para serviços personalizados ou esclarecimento de dúvidas, nos envie um email</p>
+        <button id="copy_mail">Copiar Email</button>
+        <p>Ou abra o link: </p>
+        <a class="link_cta" href="mailto:dsescuderop@gmail.com" target="_blank">E nos mande um e-mail</a>
+    </div>
+    <!--end contact-->
+    <!--start footer-->
     <footer>
         <p>&copy; Pietro D'Avila, 2024</p>
     </footer>
+    <!--end footer-->
 </body>
+
 </html>
