@@ -440,7 +440,7 @@ header div {
 }
 
 .projects img {
-    width: 50vh;
+    width: 30vh;
     transition: transform 0.8s ease;
     margin-bottom: 20px;
     margin-top: 15px;
