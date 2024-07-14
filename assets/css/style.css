@@ -360,6 +360,7 @@ header div {
     border-radius: 5px;
     transition: transform 0.3s ease;
     box-sizing: border-box;
+    border-bottom: 0.1px solid var(--color2);
 }
 
 
