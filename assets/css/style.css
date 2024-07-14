@@ -229,6 +229,7 @@ header div {
 }
 
 .home {
+    background-image: url();
     font-family: var(--jetBrains);
     margin: 20px;
     color: var(--color0);
@@ -345,33 +346,22 @@ header div {
 }
 
 .skill-section {
+    
     text-align: center;
-}
-
-.skill-div {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 1rem;
-    color: whitesmoke;
-    width: 100%;
 }
 
 .language {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    flex: 1 1 calc(25% - 2rem);
-    transition: transform 1s ease, background-color 0.8s ease-out;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0F1D26;
+    padding: 20px;
     border-radius: 5px;
-    font-family: var(--roboto);
-    margin: 1vw;
-    text-align: center;
-    padding: 1.5vw;
-    width: 33vw;
-    height: 10vh;
-    background-color: rgb(35, 34, 34);
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
+
 
 .language:hover {
     background-color: rgb(53, 51, 51);
@@ -379,7 +369,7 @@ header div {
 }
 
 .language img {
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .language span {
@@ -411,7 +401,7 @@ header div {
 }
 
 .hidden-div.active {
-    max-height: 450px !important;
+    max-height: 600px !important;
 }
 
 .scale {
