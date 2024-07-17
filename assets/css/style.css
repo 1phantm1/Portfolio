@@ -271,6 +271,7 @@ header div {
     border: 3px solid #177cd4;
     color: var(--color0);
     border-radius: 10px;
+    border: none;
     cursor: pointer;
     transition: scale ease, background-color 1s ease-out, border 1s ease-out;
 }
@@ -385,6 +386,7 @@ header div {
     text-align: center;
     text-wrap: nowrap;
     font-size: 20px;
+    margin-top: 20px;
     margin-bottom: 20px;
 }
 

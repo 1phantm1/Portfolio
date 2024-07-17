@@ -51,14 +51,21 @@
     display: none;
   }
   .content {
-    text-wrap: nowrap;
-    padding-left: 35px !important;
+    position: relative;
+    top: 0;
     top: 0 !important;
-    padding-top: 20px !important;
-    height: 10vh !important;
+    height: auto !important;
+  }
+  .content ul{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .content ul li {
-    display: inline;
+    display: inline-block;
+    margin: 10px 5px 0 5px;
+    text-align: center;
+    width: auto;
   }
   .alert {
     width: 50% !important;
@@ -80,9 +87,9 @@
     width: 50%;
   }
 }
-@media screen and (min-width: 700px) {
-  .content ul li {
-    padding-left: 30px !important;
+@media screen and (min-width: 680px){
+  .contact ul li{
+    margin: 0 15px;
   }
 }
 @media screen and (min-width: 800px) {
@@ -95,55 +102,9 @@
   .cta-button {
     width: 25% !important;
   }
-  .content ul li {
-    padding-left: 40px !important;
-  }
 }
 @media screen and (min-width: 900px) {
   h2 {
     font-size: 55px;
-  }
-  .content ul li {
-    padding-left: 55px !important;
-  }
-}
-@media screen and (min-width: 950px) {
-  .content ul li {
-    padding-left: 65px;
-  }
-}
-@media screen and (min-width: 1000px) {
-  .content ul li {
-    padding-left: 75px !important;
-  }
-}
-@media screen and (min-width: 1100px) {
-
-  .content ul li {
-    padding-left: 90px !important;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .content {
-    height: 11vh !important;
-  }
-  .content ul li {
-    padding-left: 100px !important;
-  }
-  .content li::before {
-    background-color: #182f3d !important;
-  }
-}
-@media screen and (min-width: 1300px) {
-  .content ul li {
-    padding-left: 115px !important;
-  }
-  .content ul li {
-    padding-left: 150px !important;
-  }
-}
-@media screen and (min-width: 1350px) {
-  .content ul li {
-    padding-left: 160px !important;
   }
 }
