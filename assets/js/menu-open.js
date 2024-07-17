@@ -1,1 +1,42 @@
-document.addEventListener("DOMContentLoaded",(function(){const e=document.querySelector("i#close-icon"),t=document.querySelector("i#menu-icon"),l=document.querySelector("div#collapsed"),o=document.querySelector("div#overflow"),n=document.querySelectorAll("div#collapsed ul li a");let s=!1;t.addEventListener("click",(function(){s||(l.style.top="0",t.style.display="none",e.style.display="block",o.style.display="block",setTimeout((()=>{o.style.opacity="1"}),0),s=!0)})),e.addEventListener("click",(function(){s&&(t.style.display="block",l.style.top="-100%",e.style.display="none",o.style.display="none",setTimeout((()=>{o.style.opacity="0"}),300),s=!1)})),n.forEach((n=>{n.addEventListener("click",(()=>{t.style.display="block",l.style.top="-100%",e.style.display="none",o.style.display="none",setTimeout((()=>{o.style.opacity="0"}),300),s=!1}))}))}));
+document.addEventListener("DOMContentLoaded", function () {
+  const CLOSE_ICON = document.querySelector("i#close-icon"),
+    OPEN_ICON = document.querySelector("i#menu-icon"),
+    COLLAPSED = document.querySelector("div#collapsed"),
+    OVERFLOW = document.querySelector("div#overflow"),
+    LIST = document.querySelectorAll("div#collapsed ul li a");
+  let STATE = !1;
+  OPEN_ICON.addEventListener("click", function () {
+    STATE ||
+      ((COLLAPSED.style.top = "0"),
+      (OPEN_ICON.style.display = "none"),
+      (CLOSE_ICON.style.display = "block"),
+      (OVERFLOW.style.display = "block"),
+      setTimeout(() => {
+        OVERFLOW.style.opacity = "1";
+      }, 0),
+      (STATE = !0));
+  }),
+    CLOSE_ICON.addEventListener("click", function () {
+      STATE &&
+        ((OPEN_ICON.style.display = "block"),
+        (COLLAPSED.style.top = "-100%"),
+        (CLOSE_ICON.style.display = "none"),
+        (OVERFLOW.style.display = "none"),
+        setTimeout(() => {
+          OVERFLOW.style.opacity = "0";
+        }, 300),
+        (STATE = !1));
+    }),
+    LIST.forEach((LIST) => {
+      LIST.addEventListener("click", () => {
+        (OPEN_ICON.style.display = "block"),
+          (COLLAPSED.style.top = "-100%"),
+          (CLOSE_ICON.style.display = "none"),
+          (OVERFLOW.style.display = "none"),
+          setTimeout(() => {
+            OVERFLOW.style.opacity = "0";
+          }, 300),
+          (STATE = !1);
+      });
+    });
+});

@@ -46,7 +46,7 @@ body {
     width: 100%;
     overflow-x: hidden;
     height: 100vh;
-    background-color: var(--color2);
+    background-color: var(--color2) !important;
 }
 
 h2,
@@ -54,42 +54,44 @@ h3 {
     font-family: var(--jetBrains);
 }
 
+/* Start Alert */
 .alert-div {
-    opacity: 0;
-    transition: opacity 1s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.alert-div.show {
-    opacity: 1;
-}
-
-.alert {
-    z-index: 999;
     position: fixed;
     top: 85%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    width: 100vw;
+    height: 10vh;
+    z-index: 999;
+}
+
+
+
+.alert {
+    transition: opacity 1s ease;
+    opacity: 0;
+    padding: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 60%;
     height: 50px;
-    background-color: var(--color1);
+    background-color: var(--color1) !important;
+    border: inset 10px solid var(--color3) !important;
     border-radius: 8px;
 }
-
-.alert div .img {
-    margin: 50px 35px 20px 5px;
+.alert.show {
+    opacity: 1 !important;
 }
-
 .text {
-    display: inline-block;
-    vertical-align: middle;
-    padding-bottom: 3.8em;
+    text-align: center;
+    flex: 1;
     color: var(--color0);
     font-family: var(--roboto);
 }
-
+/* End alert */
 .overflow {
     display: none;
     position: absolute;
@@ -113,10 +115,6 @@ header div {
     flex: auto;
 }
 
-.logo {
-    display: none;
-    font-size: 9px;
-}
 
 .menu,
 .close {
